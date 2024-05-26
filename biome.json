@@ -1,7 +1,7 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"files": {
-		"ignore": [".github", ".wrangler", ".vscode", "node_modules"]
+		"ignore": [".github", ".wrangler", ".vscode", "node_modules", "*.d.ts"]
 	},
 	"formatter": {
 		"lineWidth": 100
