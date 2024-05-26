@@ -33,3 +33,9 @@ kv_namespaces = [{ binding = "test", id = "71e1e6bf90a84b73881ba863165461a7" }]
 binding = "DB"                                       # i.e. available in your Worker on env.DB
 database_name = "test-d1"
 database_id = "54b87054-2dd6-41a1-8d2f-258591ec3b18"
+
+
+[vars]
+API_HOST = "example.com"
+API_ACCOUNT_ID = "example_user"
+SERVICE_X_DATA = { URL = "service-x-api.dev.example", MY_ID = 123 }
