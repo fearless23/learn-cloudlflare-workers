@@ -13,6 +13,14 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('Hello World!');
+		// try {
+		// 	const e = await env.DB.prepare("SELECT * FROM jassi").all();
+		// 	console.log({e})
+		// } catch (error) {
+		// 	console.log(error)
+		// }
+		await env.test.put("name","Jassi");
+		const val = await env.test.get("name")
+		return Response.json({name: val});
 	},
 };
