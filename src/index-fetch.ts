@@ -11,16 +11,19 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+// import type { ExecutionContext, Request } from "@cloudflare/workers-types";
+
 export default {
-	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+	// biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
+	async fetch(_request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
 		// try {
 		// 	const e = await env.DB.prepare("SELECT * FROM jassi").all();
 		// 	console.log({e})
 		// } catch (error) {
 		// 	console.log(error)
 		// }
-		await env.test.put("name","Jassi");
-		const val = await env.test.get("name")
-		return Response.json({name: val});
+		await env.test.put("name", "Jassi");
+		const val = await env.test.get("name");
+		return Response.json({ name: val });
 	},
 };

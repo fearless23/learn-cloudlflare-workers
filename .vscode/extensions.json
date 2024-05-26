@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "biomejs.biome",
+    "gruntfuggly.todo-tree",
+    "yoavbls.pretty-ts-errors",
+    "humao.rest-client"
+  ]
+}
